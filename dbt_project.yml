@@ -41,7 +41,7 @@ models:
     example:
       +materialized: table
         # Applies to all files under models/staging/
-      staging:
+    staging:
         materialized: table
     # Applies to all files under models/prep/
     prep:
