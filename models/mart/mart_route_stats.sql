@@ -1,4 +1,3 @@
-CREATE TABLE mart_route_stats AS
 SELECT
     f.origin AS origin_airport_code,
     f.dest AS destination_airport_code,
