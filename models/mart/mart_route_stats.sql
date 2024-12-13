@@ -18,11 +18,11 @@ SELECT
     d.country AS destination_country,
     d.faa AS destination_airport_name
 FROM 
-    {{ref('mart_route_stats')}} 
+    {{ref('pre_flights')}} f
 JOIN 
-    airports a ON f.origin = a.faa
+    {{ref('prep_airports')}} a ON f.origin = a.faa
 JOIN 
-    airports d ON f.dest = d.faa
+    {{ref('prep_airports')}} d ON f.dest = d.faa
 GROUP BY
     f.origin,
     f.dest,
