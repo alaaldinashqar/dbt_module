@@ -18,7 +18,7 @@ SELECT
     d.country AS destination_country,
     d.faa AS destination_airport_name
 FROM 
-    {{ref('pre_flights')}} f
+    {{ref('prep_flights')}} f
 JOIN 
     {{ref('prep_airports')}} a ON f.origin = a.faa
 JOIN 
